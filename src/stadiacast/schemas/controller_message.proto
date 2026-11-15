@@ -33,7 +33,7 @@ message DisplayToController {
   optional GetControllerStateRequest get_controller_state = 2;    // -> event 3 GET_CONTROLLER_STATE_RECEIVED
   optional Empty focus_menu = 3;                           // dispatcher (app event 3 FOCUS_MENU)
   optional Empty focus_game = 4;                           // dispatcher (app event 4 FOCUS_GAME)
-  optional BoolValue request5 = 5;
+  optional BoolValue request5 = 5;                         // true: the controller sends its microphone (Opus, display link)
   optional Empty request6 = 6;
   optional Empty request7 = 7;
   optional StringAndInt start_game = 8;                    // (str, int default 1)

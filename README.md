@@ -30,7 +30,8 @@ ESP32-C6, the controller connects to it, and the board plugs into a PC, console 
 wired USB controller:
 
 - every button, stick and trigger, and the game's rumble back to the controller;
-- USB headphones whose sound plays on the controller's headset jack;
+- a USB headset: the PC's sound plays on the controller's headset jack, and the headset's
+  microphone is the PC's microphone;
 - four modes, switched with Stadia + A/B/X/Y: Xbox 360 (XInput), DualShock 4, Switch Pro and a
   plain HID gamepad, remembered across power-ups;
 - runs from one USB-C port, with an LED for its state.
