@@ -22,6 +22,25 @@ vibrates on request and plays sound on its headset jack.
 > [issues](https://github.com/jkfran/stadiacast/issues); pull requests are very welcome.
 > Switched your controller to Bluetooth mode? It comes back, see [Requirements](#requirements).
 
+## ESP32-P4 USB dongle (this fork)
+
+This fork adds firmware that runs the receiver on a **DFRobot FireBeetle 2 ESP32-P4** board, so
+the controller needs no PC software at all. The board hosts its own Wi-Fi hotspot on its
+ESP32-C6, the controller connects to it, and the board plugs into a PC, console or phone as a
+wired USB controller:
+
+- every button, stick and trigger, and the game's rumble back to the controller;
+- USB headphones whose sound plays on the controller's headset jack;
+- four modes, switched with Stadia + A/B/X/Y: Xbox 360 (XInput), DualShock 4, Switch Pro and a
+  plain HID gamepad, remembered across power-ups;
+- runs from one USB-C port, with an LED for its state.
+
+It is tested on the board with Linux and Windows. Build, flash, first-time setup and the button
+mapping are in [firmware/esp32p4/README.md](firmware/esp32p4/README.md), and where the port
+stands in [firmware/esp32p4/docs/progress.md](firmware/esp32p4/docs/progress.md). The protocol
+work and the Python receiver below are [jkfran/stadiacast](https://github.com/jkfran/stadiacast)'s;
+the rest of this README describes that receiver.
+
 ## Key features
 
 - 🛠️ **No firmware modification.** The receiver speaks the controller's stock protocol as is,
