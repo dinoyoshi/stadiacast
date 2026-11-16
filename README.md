@@ -31,7 +31,7 @@ wired USB controller:
 
 - every button, stick and trigger, and the game's rumble back to the controller;
 - a USB headset: the PC's sound plays on the controller's headset jack, and the headset's
-  microphone is the PC's microphone;
+  microphone is the PC's microphone (push to talk: hold the Assistant button);
 - four modes, switched with Stadia + A/B/X/Y: Xbox 360 (XInput), DualShock 4, Switch Pro and a
   plain HID gamepad, remembered across power-ups;
 - runs from one USB-C port, with an LED for its state.
