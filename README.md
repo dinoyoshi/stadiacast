@@ -22,30 +22,15 @@ vibrates on request and plays sound on its headset jack.
 > [issues](https://github.com/jkfran/stadiacast/issues); pull requests are very welcome.
 > Switched your controller to Bluetooth mode? It comes back, see [Requirements](#requirements).
 
-## ESP32-P4 USB dongle (this fork)
+## ESP32-P4 USB dongle: moved
 
-This fork adds firmware that runs the receiver on a **DFRobot FireBeetle 2 ESP32-P4** board, so
-the controller needs no PC software at all. The board hosts its own Wi-Fi hotspot on its
-ESP32-C6, the controller connects to it, and the board plugs into a PC, console or phone as a
-wired USB controller:
-
-- every button, stick and trigger, and the game's rumble back to the controller;
-- a USB headset: the PC's sound plays on the controller's headset jack, and the headset's
-  microphone is the PC's microphone (push to talk: hold the Assistant button);
-- four modes, switched with Stadia + A/B/X/Y: Xbox 360 (XInput), DualShock 4, Switch Pro and a
-  plain HID gamepad, remembered across power-ups;
-- runs from one USB-C port, with an LED for its state;
-- up to four controllers at once, one USB gamepad each (Xbox 360 and HID modes);
-- a [web console](https://dinoyoshi.github.io/stadiacast/) in Chrome or Edge, over the same USB
-  cable: live stats (battery, connection quality, audio), settings (mode, headphone gain and
-  bitrate, rumble strength, microphone), pairing a controller over the board's own Bluetooth,
-  and firmware updates with automatic rollback.
-
-It is tested on the board with Linux and Windows. Build, flash, first-time setup and the button
-mapping are in [firmware/esp32p4/README.md](firmware/esp32p4/README.md), and where the port
-stands in [firmware/esp32p4/docs/progress.md](firmware/esp32p4/docs/progress.md). The protocol
-work and the Python receiver below are [jkfran/stadiacast](https://github.com/jkfran/stadiacast)'s;
-the rest of this README describes that receiver.
+This fork used to hold firmware that runs the receiver on a **DFRobot FireBeetle 2 ESP32-P4**
+board as a USB dongle for the Stadia Controller (input, rumble, headset audio and microphone, up
+to four controllers, a web console with firmware updates). It now lives in its own repository,
+with its history: **[dinoyoshi/stadiacast-dongle](https://github.com/dinoyoshi/stadiacast-dongle)**,
+and its web console at [dinoyoshi.github.io/stadiacast-dongle](https://dinoyoshi.github.io/stadiacast-dongle/).
+Its pull requests #1 to #34 stay here. The rest of this README describes
+[jkfran/stadiacast](https://github.com/jkfran/stadiacast)'s Python receiver.
 
 ## Key features
 
