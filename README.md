@@ -34,7 +34,12 @@ wired USB controller:
   microphone is the PC's microphone (push to talk: hold the Assistant button);
 - four modes, switched with Stadia + A/B/X/Y: Xbox 360 (XInput), DualShock 4, Switch Pro and a
   plain HID gamepad, remembered across power-ups;
-- runs from one USB-C port, with an LED for its state.
+- runs from one USB-C port, with an LED for its state;
+- up to four controllers at once, one USB gamepad each (Xbox 360 and HID modes);
+- a [web console](https://dinoyoshi.github.io/stadiacast/) in Chrome or Edge, over the same USB
+  cable: live stats (battery, connection quality, audio), settings (mode, headphone gain and
+  bitrate, rumble strength, microphone), pairing a controller over the board's own Bluetooth,
+  and firmware updates with automatic rollback.
 
 It is tested on the board with Linux and Windows. Build, flash, first-time setup and the button
 mapping are in [firmware/esp32p4/README.md](firmware/esp32p4/README.md), and where the port
