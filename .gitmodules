@@ -1,3 +1,0 @@
-[submodule "firmware/esp32p4/components/opus/libopus"]
-	path = firmware/core/opus/libopus
-	url = https://github.com/xiph/opus.git
